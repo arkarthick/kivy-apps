@@ -2,8 +2,10 @@ from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.lang import Builder
 from button import *
+from kivy.config import Config
 
 
+# Config.set()
 from os import listdir
 kv_path = ".\\kv_files\\"
 for file in listdir(kv_path):
