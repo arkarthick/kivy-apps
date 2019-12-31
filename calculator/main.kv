@@ -1,0 +1,69 @@
+#: kivy 1.11.1
+<Button>
+	color: (1, 1, 0, 1)
+	font_size: 20
+<Container>
+	display : display
+	rows: 2
+
+	BoxLayout:
+		Label:
+			id : display
+			text: ''
+			font_size: dp(50)
+
+	BoxLayout:
+		cols: 5
+		BoxLayout:
+			orientation: 'vertical'
+			Num_7:
+				on_press: display.text += self.text
+			Num_4:
+				on_press: display.text += self.text
+			Num_1:
+				on_press: display.text += self.text
+			Num_0:
+				on_press: display.text += self.text
+
+		BoxLayout:
+			orientation: 'vertical'
+			Num_8:
+				on_press: display.text += self.text
+			Num_5:
+				on_press: display.text += self.text
+			Num_2:
+				on_press: display.text += self.text
+			Num_00:
+				on_press: display.text += self.text
+
+		BoxLayout:
+			orientation: 'vertical'
+			Num_9:
+				on_press: display.text += self.text
+			Num_6:
+				on_press: display.text += self.text
+			Num_3:
+				on_press: display.text += self.text
+			Dot:
+				on_press: display.text += self.text
+		
+		BoxLayout:
+			orientation: 'vertical'
+			Del_btn:
+				on_press: display.text = display.text[:-1]
+			Multi_btn:
+				on_press: display.text += self.text
+			Div_btn:
+				on_press: display.text += self.text
+			Sub_btn:
+				on_press: display.text += self.text
+
+		BoxLayout:
+			orientation: 'vertical'
+			Clear_btn:
+				on_press : display.text =''
+			Add_btn:
+				on_press: display.text += self.text
+			Equal_btn:
+				color: (0, 0,0, 1)
+				on_press: root.calculate(display.text)
