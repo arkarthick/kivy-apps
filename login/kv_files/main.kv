@@ -1,0 +1,40 @@
+#: kivy 1.11.1
+
+<TextInput>
+	font_size: 15
+	size_hint: (None, None)
+	size: (150, 30)	
+	background_color: (0, 0, 0, 1)
+
+<Label>
+	font_size: 15
+	size_hint: (None, None)
+	size: (80, 30)
+	color: (1, 1, 1, .5)
+
+<Button>
+	font_size: 15
+	size_hint: (None, None)
+	size: (150, 30)
+
+<LoginPage>
+	pos_hint: {'top': .5 + self.size_hint[1]/2}
+	BoxLayout:
+		orientation: 'vertical'
+		# pos_hint: {'center_x': .5, 'center_y': .5}
+		BoxLayout:
+			orientation: 'horizontal'
+			Label:
+				text: 'Username'
+			TextInput:
+				multiline: False
+		BoxLayout:
+			orientation: 'horizontal'
+			Label:
+				text: 'Password'
+			TextInput:
+				multiline: False
+				password: True
+		BoxLayout:
+			Button:
+				text: 'Log In'

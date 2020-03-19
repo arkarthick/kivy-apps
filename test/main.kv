@@ -1,0 +1,17 @@
+#: kivy 1.11.1
+
+#class name
+<Container>
+	display : qwe
+	rows: 1
+	BoxLayout:
+		orientation: 'vertical'
+		AddBtn:
+			on_release : root.add()
+		SubBtn:
+			on_release : root.sub()
+
+	Label:
+		id : qwe
+		font_size: dp(50)
+		text: '0'

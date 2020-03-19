@@ -1,0 +1,18 @@
+#:kivy 1.11.1
+
+<Widgets>
+	Button:
+		text: 'press'
+		on_release : root.btn()
+
+<Pop>
+	Label:
+		text: 'popup'
+		size_hint: (.6, .2)
+		pos_hint: {'center_x':.5, 'center_y':.5}
+	Button:
+		text: 'close this popup'
+		size_hint: (.5, .3)
+		pos_hint: {'x': 0}
+
+
